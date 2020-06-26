@@ -19,7 +19,6 @@ class PolyTreeNode
         @children
     end
 
-
     def parent=(target)
         if target != nil
             @parent.children.delete(self) if @parent != nil
