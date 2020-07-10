@@ -1,0 +1,2 @@
+module ArtworkshareHelper
+end
