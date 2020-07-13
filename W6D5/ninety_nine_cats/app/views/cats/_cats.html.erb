@@ -1,0 +1,27 @@
+
+<% if action == :show %>
+  <a href="<%= cats_url %>">back to cat index!</a>
+    <table>
+        <caption>Cat information</caption>
+        <tbody>
+            <tr>
+                <th scope="col">Name </th>
+                <th scope="col">Sex</th>
+                <th scope="col">Color</th>
+                <th scope="col">Birth Date</th>
+                <th scope="col">Description</th>
+            </tr>
+            <tr>
+                <th scope="row"><%= catcat.name %></th>
+                <td><code><%= catcat.sex %></code></td>
+                <td><code><%= catcat.color %></code></td>
+                <td><code><%= catcat.birth_date %></code></td>
+                <td><code><%= catcat.description %></code></td>
+            </tr>
+        </tbody>
+    </table>
+<% else %> <%# action == :index%>
+  <a href="<%= cat_url(catcat) %>">cat show page!</a>
+  <h4><%= catcat.name %></h4>
+<% end %>
+
