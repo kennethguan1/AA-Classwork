@@ -1,0 +1,15 @@
+<%= button_to "Back to User's Index", users_url, method: :get %>
+
+<h1>Welcome to the Front Page of the Internet!</h1>
+
+<%= link_to "Create a New Sub", new_sub_url, method: :get %>
+
+<ul>
+    <% @subs.each do |sub| %>
+        <li>
+            <a href="<%= sub_url(sub) %>"><%= sub.title %></a>
+        </li>
+        <p><%= sub.description %></p>
+        <%= button_to "Edit Sub", edit_sub_url(sub), method: :get %>
+    <% end %>
+</ul>

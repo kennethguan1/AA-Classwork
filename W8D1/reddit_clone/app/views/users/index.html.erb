@@ -1,0 +1,12 @@
+<h1>Users Index</h1>
+
+<h4>Welcome <%= current_user.username %> to RedditClone!</h4>
+
+<h5>These are your subs that you moderate:</h5>
+<ul>
+    <% current_user.subs.each do |sub| %>
+        <li>
+            <a href="<%= sub_url(sub) %>"><%= sub.title %></a>
+        </li>
+    <% end %>
+</ul>
